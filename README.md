@@ -20,105 +20,121 @@
 
 # \## 📂 Project Structure
 
-# ```text
+# 
 
 # Bornomala/
 
 # ├── data/
 
-# │   ├── audio\_segments/    # Short 10-20s audio clips (Not on GitHub, stored locally/Drive)
+# │   ├── draft\_transcriptions\_FINAL.csv   # The main file to be annotated
 
-# │   ├── metadata/          # Inventory CSVs and logs
+# │   ├── segmented\_inventory.csv          # Metadata of all audio segments
 
-# │   └── drafts/            # Model-generated drafts awaiting human correction
+# │   └── audio\_segments/                  # Audio files (Hosted on Drive)
 
-# ├── notebooks/             # Kaggle/Colab notebooks for Mining, Segmentation \& Training
+# ├── notebooks/                           # Code for Mining, Segmentation \& Transcription
 
-# ├── experiments/           # Training logs and Metric reports
+# ├── experiments/logs/                    # Execution logs
 
-# └── docs/                  # Annotation guidelines
+# └── docs/                                # Documentation
 
-\## 🚀 Research Roadmap
+# 
 
+# 
 
+# \## 🚀 Research Roadmap
 
-| Phase | Task | Status |
+# 
 
-| :--- | :--- | :--- |
+# | Phase | Task | Status |
 
-| \*\*1A\*\* | Problem Definition \& Ambiguity Analysis | ✅ Completed |
+# | :--- | :--- | :--- |
 
-| \*\*1B\*\* | Baseline Testing (Whisper Failure Proof) | ✅ Completed |
+# | \*\*1A\*\* | Problem Definition \& Ambiguity Analysis | ✅ Completed |
 
-| \*\*1C\*\* | Data Mining \& Segmentation (YouTube) | ✅ Completed |
+# | \*\*1B\*\* | Baseline Testing (Whisper Failure Proof) | ✅ Completed |
 
-| \*\*2A\*\* | Automated Draft Transcription | ✅ Completed |
+# | \*\*1C\*\* | Data Mining \& Segmentation (YouTube) | ✅ Completed |
 
-| \*\*2B\*\* | \*\*Manual Annotation / Correction\*\* | 🟡 \*\*In Progress\*\* |
+# | \*\*2A\*\* | Automated Draft Transcription | ✅ Completed |
 
-| \*\*3\*\* | Active Learning Loop \& Fine-tuning | ⭕ Upcoming |
+# | \*\*2B\*\* | \*\*Manual Annotation / Correction\*\* | 🟡 \*\*In Progress\*\* |
 
+# | \*\*3\*\* | Active Learning Loop \& Fine-tuning | ⭕ Upcoming |
 
+# 
 
-\## 📝 Guide for Annotators (How to Contribute)
+# ---
 
+# 
 
+# \## 📝 Guide for Annotators (How to Contribute)
 
-We use a \*\*Semi-Automated\*\* approach. You do not need to type from scratch.
+# 
 
+# We use a \*\*Semi-Automated\*\* approach. You do not need to type from scratch.
 
+# 
 
-1\.  \*\*Download Data:\*\* Get the `draft\_transcriptions\_FINAL.csv` and the Audio folder.
+# \### Step 1: Download Data
 
-2\.  \*\*Open CSV:\*\* Open the file in Excel or Google Sheets.
+# 1\.  \*\*CSV File:\*\* Download `data/draft\_transcriptions\_FINAL.csv` from this repository.
 
-3\.  \*\*Listen \& Correct:\*\*
+# 2\.  \*\*Audio Files:\*\* Download the audio clips from our Google Drive:
 
-&nbsp;   \* Play the audio file (e.g., `Sylheti\_seg001.wav`).
+# &nbsp;   \* 🔗 \*\*\[Download Audio Files (Google Drive)](https://drive.google.com/drive/folders/1d6j1felhwS-HHJT4PgOL6Gi3-HWuwuHn)\*\*
 
-&nbsp;   \* Check the `machine\_transcript` column (It will likely be wrong).
+# 
 
-&nbsp;   \* Write the \*\*Standard Bengali (শুদ্ধ বাংলা)\*\* meaning in the `human\_correction` column.
+# \### Step 2: Start Annotation
 
+# 1\.  Open the CSV file in \*\*Excel\*\* or \*\*Google Sheets\*\*.
 
+# 2\.  Play an audio file (e.g., `Sylheti\_seg001.wav`).
 
-\### Example:
+# 3\.  Check the `machine\_transcript` column (It will likely be incorrect/Hindi).
 
-| Audio File | Dialect | Machine Output (Wrong) | \*\*Human Correction (Correct)\*\* |
+# 4\.  Write the \*\*Standard Bengali (শুদ্ধ বাংলা)\*\* meaning in the `human\_correction` column.
 
-| :--- | :--- | :--- | :--- |
+# 
 
-| `syl\_01.wav` | Sylheti | আমি যাইরাম গি (Dialect text) | \*\*আমি চলে যাচ্ছি\*\* |
+# \### Example:
 
-| `ctg\_05.wav` | Chittagonian | ইতারা খাইতে আছে (Dialect text) | \*\*তারা খাচ্ছে\*\* |
+# | Audio File | Dialect | Machine Output (Wrong) | \*\*Human Correction (Correct)\*\* |
 
+# | :--- | :--- | :--- | :--- |
 
+# | `syl\_01.wav` | Sylheti | আমি যাইরাম গি (Dialect text) | \*\*আমি চলে যাচ্ছি\*\* |
 
-\*\*Note:\*\* Always normalize to Standard Bengali grammar. Do not write the dialect spelling unless instructed otherwise.
+# | `ctg\_05.wav` | Chittagonian | ইতারা খাইতে আছে (Dialect text) | \*\*তারা খাচ্ছে\*\* |
 
+# 
 
+# \*\*Note:\*\* Always normalize to Standard Bengali grammar. Do not write the dialect spelling unless instructed otherwise.
 
----
+# 
 
+# ---
 
+# 
 
-\## 🛠️ Technology Stack
+# \## 🛠️ Technology Stack
 
-\* \*\*ASR Model:\*\* OpenAI Whisper (Medium/Large-v2)
+# \* \*\*ASR Model:\*\* OpenAI Whisper (Medium/Large-v2)
 
-\* \*\*Preprocessing:\*\* Silero VAD, FFmpeg
+# \* \*\*Preprocessing:\*\* Silero VAD, FFmpeg
 
-\* \*\*Environment:\*\* Kaggle P100 GPU / Colab Pro
+# \* \*\*Environment:\*\* Kaggle P100 GPU / Colab Pro
 
-\* \*\*Framework:\*\* PyTorch, HuggingFace
+# \* \*\*Framework:\*\* PyTorch, HuggingFace
 
+# 
 
+# \## 👨‍💻 Author
 
-\## 👨‍💻 Author
+# \*\*Swagotam Malakar\*\*
 
-\*\*Swagotam Malakar\*\*
+# \* Research Domain: NLP \& Speech Processing
 
-\* Research Domain: NLP \& Speech Processing
-
-\* GitHub: \[@smalakar-is-here](https://github.com/smalakar-is-here)
+# \* GitHub: \[@smalakar-is-here](https://github.com/smalakar-is-here)
 
