@@ -53,14 +53,46 @@ We use a **Semi-Automated** approach. You do not need to type from scratch.
 3. Check the `machine_transcript` column (It will likely be incorrect/Hindi).
 4. Write the **Standard Bengali (শুদ্ধ বাংলা)** meaning in the `human_correction` column.
 
-### Example:
+---
+
+## ⚠️ Annotation Rules (Must Follow)
+
+Please follow these rules strictly to ensure high-quality data:
+
+### 1. Standard Bengali Only (শুদ্ধ বাংলা)
+
+Always translate the dialect to Standard Colloquial Bengali. Do not write dialect spellings.
+
+- ❌ Audio: "ইতারা খাইতে আছে" → Write: "ইতারা খাইতে আছে"
+- ✅ Audio: "ইতারা খাইতে আছে" → Write: "তারা খাচ্ছে।"
+
+### 2. Punctuation is Mandatory (বিরাম চিহ্ন)
+
+You must use Dari (।) for statements and Question Mark (?) for questions.
+
+- ❌ Write: তুমি কি আসবে
+- ✅ Write: তুমি কি আসবে?
+
+### 3. No English Text
+
+If the audio contains English words, write them in Bengali script.
+
+- ❌ Write: আমি University তে যাই।
+- ✅ Write: আমি ইউনিভার্সিটিতে যাই।
+
+### 4. Unclear Audio
+
+If a word or sentence is completely unintelligible, use the tag `[অস্পষ্ট]`.
+
+---
+
+## 📋 Examples
 
 | Audio File | Dialect | Machine Output (Wrong) | **Human Correction (Correct)** |
 | :--- | :--- | :--- | :--- |
-| `syl_01.wav` | Sylheti | আমি যাইরাম গি (Dialect text) | **আমি চলে যাচ্ছি** |
-| `ctg_05.wav` | Chittagonian | ইতারা খাইতে আছে (Dialect text) | **তারা খাচ্ছে** |
-
-**Note:** Always normalize to Standard Bengali grammar. Do not write the dialect spelling unless instructed otherwise.
+| `syl_01.wav` | Sylheti | আমি যাইরাম গি (Dialect text) | **আমি চলে যাচ্ছি।** |
+| `ctg_05.wav` | Chittagonian | ইতারা খাইতে আছে (Dialect text) | **তারা খাচ্ছে।** |
+| `noa_09.wav` | Noakhali | আর হুনছিনি খবর? | **আর খবর শুনেছ কি?** |
 
 ---
 
