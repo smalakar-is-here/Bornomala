@@ -1,0 +1,104 @@
+7.0s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.0s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.0s 3 0.00s - to python to disable frozen modules.
+7.0s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.6s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.6s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.6s 7 0.00s - to python to disable frozen modules.
+7.6s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+14.1s 9 [06:22:21] INFO: Installing Silero VAD & Torchaudio...
+14.1s 10 
+14.1s 11 [06:22:21] INFO: Installing Silero VAD & Torchaudio...
+14.1s 12 [06:22:21] INFO: ✓ Dependencies Loaded.
+14.1s 13 
+14.1s 14 [06:22:21] INFO: ✓ Dependencies Loaded.
+14.2s 15 [06:22:21] INFO: ✓ Found Input Directory: /kaggle/input/phase-1c-youtube-mining/processed_audio
+14.2s 16 
+14.2s 17 [06:22:21] INFO: ✓ Found Input Directory: /kaggle/input/phase-1c-youtube-mining/processed_audio
+14.2s 18 [06:22:21] INFO: ✓ Found 5 raw audio files for processing.
+14.2s 19 
+14.2s 20 [06:22:21] INFO: ✓ Found 5 raw audio files for processing.
+14.2s 21 [06:22:21] INFO: Loading Silero VAD Model...
+14.2s 22 
+14.2s 23 [06:22:21] INFO: Loading Silero VAD Model...
+14.6s 24 Downloading: "https://github.com/snakers4/silero-vad/zipball/master" to /root/.cache/torch/hub/master.zip
+15.6s 25 [06:22:22] INFO: ✓ VAD Model Loaded Successfully.
+15.6s 26 
+15.6s 27 [06:22:22] INFO: ✓ VAD Model Loaded Successfully.
+15.6s 28 [06:22:22] INFO: Starting Segmentation Pipeline...
+15.6s 29 
+15.6s 30 [06:22:22] INFO: Starting Segmentation Pipeline...
+15.6s 31 [06:22:22] INFO: Processing: Chittagonian_JvwgOr-K0vQ.wav...
+15.6s 32 
+15.6s 33 [06:22:22] INFO: Processing: Chittagonian_JvwgOr-K0vQ.wav...
+52.8s 34 [06:22:59] INFO:    -> Generated 73 clean segments.
+52.8s 35 
+52.8s 36 [06:22:59] INFO:    -> Generated 73 clean segments.
+52.8s 37 [06:22:59] INFO: Processing: Noakhali_wMP0zweZUzA.wav...
+52.8s 38 
+52.8s 39 [06:22:59] INFO: Processing: Noakhali_wMP0zweZUzA.wav...
+115.9s 40 [06:24:02] INFO:    -> Generated 154 clean segments.
+115.9s 41 
+115.9s 42 [06:24:02] INFO:    -> Generated 154 clean segments.
+115.9s 43 [06:24:02] INFO: Processing: Chittagonian_mumxd18fIK0.wav...
+115.9s 44 
+115.9s 45 [06:24:02] INFO: Processing: Chittagonian_mumxd18fIK0.wav...
+176.4s 46 [06:25:03] INFO:    -> Generated 143 clean segments.
+176.4s 47 
+176.4s 48 [06:25:03] INFO:    -> Generated 143 clean segments.
+176.4s 49 [06:25:03] INFO: Processing: Sylheti_6Ycv4OO9kwo.wav...
+176.4s 50 
+176.4s 51 [06:25:03] INFO: Processing: Sylheti_6Ycv4OO9kwo.wav...
+215.6s 52 [06:25:42] INFO:    -> Generated 117 clean segments.
+215.6s 53 
+215.6s 54 [06:25:42] INFO:    -> Generated 117 clean segments.
+215.6s 55 [06:25:42] INFO: Processing: Sylheti_B8tTlSZo7Z8.wav...
+215.6s 56 
+215.6s 57 [06:25:42] INFO: Processing: Sylheti_B8tTlSZo7Z8.wav...
+244.7s 58 [06:26:11] INFO:    -> Generated 90 clean segments.
+244.7s 59 
+244.7s 60 [06:26:11] INFO:    -> Generated 90 clean segments.
+244.8s 61 [06:26:11] INFO: === SEGMENTATION COMPLETE ===
+244.8s 62 
+244.8s 63 [06:26:11] INFO: === SEGMENTATION COMPLETE ===
+244.8s 64 [06:26:11] INFO: Total Segments Created: 577
+244.8s 65 
+244.8s 66 [06:26:11] INFO: Total Segments Created: 577
+244.8s 67 [06:26:11] INFO: Total Clean Speech Duration: 2.82 hours
+244.8s 68 
+244.8s 69 [06:26:11] INFO: Total Clean Speech Duration: 2.82 hours
+244.8s 70 [06:26:11] INFO: Manifest Saved: /kaggle/working/manifests/segmented_inventory.csv
+244.8s 71 
+244.8s 72 [06:26:11] INFO: Manifest Saved: /kaggle/working/manifests/segmented_inventory.csv
+244.8s 73 filename  \
+244.8s 74 0  Chittagonian_JvwgOr-K0vQ_seg0000.wav
+244.8s 75 1  Chittagonian_JvwgOr-K0vQ_seg0001.wav
+244.8s 76 2  Chittagonian_JvwgOr-K0vQ_seg0002.wav
+244.8s 77 3  Chittagonian_JvwgOr-K0vQ_seg0003.wav
+244.8s 78 4  Chittagonian_JvwgOr-K0vQ_seg0004.wav
+244.8s 79 
+244.8s 80 filepath       dialect  \
+244.8s 81 0  /kaggle/working/segmented_dataset/Chittagonian...  Chittagonian
+244.8s 82 1  /kaggle/working/segmented_dataset/Chittagonian...  Chittagonian
+244.8s 83 2  /kaggle/working/segmented_dataset/Chittagonian...  Chittagonian
+244.8s 84 3  /kaggle/working/segmented_dataset/Chittagonian...  Chittagonian
+244.8s 85 4  /kaggle/working/segmented_dataset/Chittagonian...  Chittagonian
+244.8s 86 
+244.8s 87 source_file  duration
+244.8s 88 0  Chittagonian_JvwgOr-K0vQ    18.612
+244.8s 89 1  Chittagonian_JvwgOr-K0vQ    19.088
+244.8s 90 2  Chittagonian_JvwgOr-K0vQ     5.820
+244.8s 91 3  Chittagonian_JvwgOr-K0vQ    19.924
+244.8s 92 4  Chittagonian_JvwgOr-K0vQ    18.536
+248.3s 93 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+248.3s 94 cells[i][c] = re.sub('\\\\\|', '|', cell)
+248.5s 95 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+248.5s 96 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+249.1s 97 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+249.1s 98 warn(
+249.1s 99 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+249.4s 100 [NbConvertApp] Writing 30037 bytes to __notebook__.ipynb
+251.9s 101 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+251.9s 102 warn(
+251.9s 103 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+252.7s 104 [NbConvertApp] Writing 319654 bytes to __results__.html

@@ -1,0 +1,122 @@
+7.4s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.4s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.4s 3 0.00s - to python to disable frozen modules.
+7.4s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.0s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.0s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.0s 7 0.00s - to python to disable frozen modules.
+8.0s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.1s 9 === Installing Research Dependencies ===
+11.2s 10 [?25l     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/803.2 kB[0m [31m?[0m eta [36m-:--:--[0m[2K     [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━[0m [32m675.8/803.2 kB[0m [31m20.1 MB/s[0m eta [36m0:00:01[0m[2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m803.2/803.2 kB[0m [31m16.5 MB/s[0m eta [36m0:00:00[0m
+15.5s 11 [?25h  Installing build dependencies ... [?25l[?25hdone
+15.8s 12 Getting requirements to build wheel ... [?25l[?25hdone
+16.0s 13 Preparing metadata (pyproject.toml) ... [?25l[?25hdone
+16.6s 14 Building wheel for openai-whisper (pyproject.toml) ... [?25l[?25hdone
+18.7s 15 ✓ Dependencies installed successfully.
+24.6s 16 [05:14:14] INFO: Initializing Computational Environment...
+24.6s 17 
+24.6s 18 [05:14:14] INFO: Initializing Computational Environment...
+24.6s 19 [05:14:14] INFO: Computation Device: CUDA
+24.6s 20 
+24.6s 21 [05:14:14] INFO: Computation Device: CUDA
+24.6s 22 [05:14:14] INFO: GPU Detected: Tesla P100-PCIE-16GB (Optimized for Inference)
+24.6s 23 
+24.6s 24 [05:14:14] INFO: GPU Detected: Tesla P100-PCIE-16GB (Optimized for Inference)
+24.6s 25 [05:14:14] INFO: Directory Validated: /kaggle/working/metadata
+24.6s 26 
+24.6s 27 [05:14:14] INFO: Directory Validated: /kaggle/working/metadata
+24.6s 28 [05:14:14] INFO: Directory Validated: /kaggle/working/logs
+24.6s 29 
+24.6s 30 [05:14:14] INFO: Directory Validated: /kaggle/working/logs
+24.6s 31 [05:14:14] INFO: Directory Validated: /kaggle/working/experiments/baseline
+24.6s 32 
+24.6s 33 [05:14:14] INFO: Directory Validated: /kaggle/working/experiments/baseline
+24.6s 34 [05:14:14] INFO: Experiment Configuration archived to /kaggle/working/config.json
+24.6s 35 
+24.6s 36 [05:14:14] INFO: Experiment Configuration archived to /kaggle/working/config.json
+24.6s 37 [05:14:14] INFO: Initiating Data Ingestion Protocol...
+24.6s 38 
+24.6s 39 [05:14:14] INFO: Initiating Data Ingestion Protocol...
+24.6s 40 [05:14:14] INFO: Dataset verified: RegSpeech12 found at /kaggle/input/regspeech12
+24.6s 41 
+24.6s 42 [05:14:14] INFO: Dataset verified: RegSpeech12 found at /kaggle/input/regspeech12
+55.2s 43 [05:14:44] INFO: Ingested 21313 samples from RegSpeech12
+55.2s 44 
+55.2s 45 [05:14:44] INFO: Ingested 21313 samples from RegSpeech12
+55.2s 46 [05:14:44] INFO: Dataset verified: Common Voice Bengali found at /kaggle/input/common-voice-13-bengali-normalized
+55.2s 47 
+55.2s 48 [05:14:44] INFO: Dataset verified: Common Voice Bengali found at /kaggle/input/common-voice-13-bengali-normalized
+242.5s 49 [05:17:51] INFO: Ingested 86958 samples from Common Voice Bengali
+242.5s 50 
+242.5s 51 [05:17:51] INFO: Ingested 86958 samples from Common Voice Bengali
+243.0s 52 [05:17:52] INFO: Global Inventory generated: 108271 total samples indexed.
+243.0s 53 
+243.0s 54 [05:17:52] INFO: Global Inventory generated: 108271 total samples indexed.
+243.0s 55 [05:17:52] INFO: Loading Neural Architecture: whisper-base
+243.0s 56 
+243.0s 57 [05:17:52] INFO: Loading Neural Architecture: whisper-base
+243.1s 58 0%|                                               | 0.00/139M [00:00<?, ?iB/s]
+243.3s 59 0%|                                               | 0.00/139M [00:00<?, ?iB/s]  5%|█▋                                    | 6.34M/139M [00:00<00:02, 62.2MiB/s]
+243.4s 60 5%|█▋                                    | 6.34M/139M [00:00<00:02, 62.2MiB/s]  9%|███▎                                  | 12.3M/139M [00:00<00:03, 42.8MiB/s]
+243.5s 61 9%|███▎                                  | 12.3M/139M [00:00<00:03, 42.8MiB/s] 20%|███████▋                              | 28.2M/139M [00:00<00:01, 86.8MiB/s]
+243.6s 62 20%|███████▋                              | 28.2M/139M [00:00<00:01, 86.8MiB/s] 29%|███████████▍                           | 40.7M/139M [00:00<00:01, 101MiB/s]
+243.7s 63 29%|███████████▍                           | 40.7M/139M [00:00<00:01, 101MiB/s] 41%|████████████████                       | 56.9M/139M [00:00<00:00, 123MiB/s]
+243.8s 64 41%|████████████████                       | 56.9M/139M [00:00<00:00, 123MiB/s] 50%|███████████████████▌                   | 69.5M/139M [00:00<00:00, 122MiB/s]
+244.0s 65 50%|███████████████████▌                   | 69.5M/139M [00:00<00:00, 122MiB/s] 59%|██████████████████████▉                | 81.7M/139M [00:00<00:00, 120MiB/s]
+244.1s 66 59%|██████████████████████▉                | 81.7M/139M [00:00<00:00, 120MiB/s] 68%|██████████████████████████▌            | 94.2M/139M [00:00<00:00, 124MiB/s]
+244.2s 67 68%|██████████████████████████▌            | 94.2M/139M [00:00<00:00, 124MiB/s] 81%|████████████████████████████████▍       | 112M/139M [00:01<00:00, 144MiB/s]
+244.3s 68 81%|████████████████████████████████▍       | 112M/139M [00:01<00:00, 144MiB/s] 93%|█████████████████████████████████████   | 128M/139M [00:01<00:00, 150MiB/s]
+244.3s 69 93%|█████████████████████████████████████   | 128M/139M [00:01<00:00, 150MiB/s]100%|████████████████████████████████████████| 139M/139M [00:01<00:00, 121MiB/s]
+244.4s 70 100%|████████████████████████████████████████| 139M/139M [00:01<00:00, 121MiB/s]
+244.4s 71 
+244.4s 72 
+245.9s 73 [05:17:55] INFO: Model successfully mounted to accelerator.
+245.9s 74 
+245.9s 75 [05:17:55] INFO: Model successfully mounted to accelerator.
+246.1s 76 [05:17:55] INFO: Starting Inference Pipeline on 50 stratified samples per source...
+246.1s 77 
+246.1s 78 [05:17:55] INFO: Starting Inference Pipeline on 50 stratified samples per source...
+246.1s 79 [05:17:55] INFO: Processing Source: RegSpeech12 (50 samples)
+246.1s 80 
+246.1s 81 [05:17:55] INFO: Processing Source: RegSpeech12 (50 samples)
+564.0s 82 [05:23:13] INFO: Processing Source: Common Voice Bengali (50 samples)
+564.0s 83 
+564.0s 84 [05:23:13] INFO: Processing Source: Common Voice Bengali (50 samples)
+662.9s 85 [05:24:52] INFO: Pipeline Complete. Raw analysis data saved to /kaggle/working/experiments/baseline/baseline_transcripts.json
+662.9s 86 
+662.9s 87 [05:24:52] INFO: Pipeline Complete. Raw analysis data saved to /kaggle/working/experiments/baseline/baseline_transcripts.json
+662.9s 88 [05:24:52] INFO: Generating Final Statistical Report...
+662.9s 89 
+662.9s 90 [05:24:52] INFO: Generating Final Statistical Report...
+663.0s 91 
+663.0s 92 === RESEARCH PIPELINE SUMMARY ===
+663.0s 93 {
+663.0s 94 "timestamp": "2026-01-15T05:24:52.476824",
+663.0s 95 "project_version": "1.0.0-phase1b",
+663.0s 96 "dataset_statistics": {
+663.0s 97 "total_files_indexed": 108271,
+663.0s 98 "distribution": {
+663.0s 99 "Common Voice Bengali": 86958,
+663.0s 100 "RegSpeech12": 21313
+663.0s 101 },
+663.0s 102 "file_formats": {
+663.0s 103 "mp3": 86958,
+663.0s 104 "wav": 21313
+663.0s 105 }
+663.0s 106 },
+663.0s 107 "status": "Phase 1B Complete - Ready for Ambiguity Annotation"
+663.0s 108 }
+663.0s 109 
+663.0s 110 [INFO] All research artifacts are archived in: /kaggle/working
+666.8s 111 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+666.8s 112 cells[i][c] = re.sub('\\\\\|', '|', cell)
+666.9s 113 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+666.9s 114 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+667.5s 115 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+667.5s 116 warn(
+667.6s 117 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+667.9s 118 [NbConvertApp] Writing 46742 bytes to __notebook__.ipynb
+670.3s 119 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+670.3s 120 warn(
+670.3s 121 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+671.2s 122 [NbConvertApp] Writing 342050 bytes to __results__.html
