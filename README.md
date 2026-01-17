@@ -1,140 +1,71 @@
-# \# Bornomala: Bangla Dialect Normalization Project 🇧🇩
+# Bornomala: Bangla Dialect Normalization Project 🇧🇩
 
-# 
+Bornomala is a research initiative aimed at bridging the gap between regional Bangla dialects (Sylheti, Chittagonian, Noakhali) and Standard Colloquial Bengali (SCB). Using Active Learning, we aim to build robust Speech-to-Text systems capable of understanding dialectal Bangla and transcribing it into normalized standard Bengali text.
 
-# \*\*Bornomala\*\* is a research initiative aimed at bridging the gap between regional Bangla dialects (e.g., Sylheti, Chittagonian, Noakhali) and Standard Colloquial Bengali (SCB). Using \*\*Active Learning\*\*, we are building robust Speech-to-Text models that can understand dialects and transcribe them into standard Bengali syntax.
+## Objective
 
-# 
+Current ASR models such as Whisper fail on regional Bangla dialects and often hallucinate Hindi or gibberish text. The goals of this project are:
 
-# \## 🎯 Objective
+1. Curate a high-quality Bangla dialect speech dataset from real-world sources such as dramas and vlogs.
+2. Normalize dialect speech into standard Bengali grammar.
+3. Fine-tune Whisper using an Active Learning loop to reduce manual annotation cost.
 
-# Current ASR models (like Whisper) fail on regional dialects, often hallucinating Hindi or Gibberish. Our goal is to:
+## Project Structure
 
-# 1\.  \*\*Curate\*\* a high-quality dialect dataset from real-world sources (Dramas, Vlogs).
+Bornomala/
+- data/
+  - draft_transcriptions_FINAL.csv (main annotation file)
+  - segmented_inventory.csv (audio segment metadata)
+  - audio_segments/ (audio files hosted on Drive)
+- notebooks/ (mining, segmentation and transcription code)
+- experiments/logs/ (execution logs)
+- docs/ (documentation)
 
-# 2\.  \*\*Normalize\*\* dialect speech to standard text (e.g., \*"I go-ram"\* → \*"Ami jacchi"\*).
+## Research Roadmap
 
-# 3\.  \*\*Train\*\* a fine-tuned Whisper model using an Active Learning loop to minimize manual annotation effort.
+Phase | Task | Status
+----- | ---- | ------
+1A | Problem Definition and Ambiguity Analysis | Completed
+1B | Baseline Testing (Whisper Failure Proof) | Completed
+1C | Data Mining and Segmentation (YouTube) | Completed
+2A | Automated Draft Transcription | Completed
+2B | Manual Annotation and Correction | In Progress
+3 | Active Learning Loop and Fine-tuning | Upcoming
 
-# 
+## Guide for Annotators
 
-# \## 📂 Project Structure
+This project follows a semi-automated annotation approach. Annotators are not required to transcribe from scratch.
 
-# 
+### Step 1: Download Data
 
-# Bornomala/
+- CSV file: data/draft_transcriptions_FINAL.csv
+- Audio files: https://drive.google.com/drive/folders/1d6j1felhwS-HHJT4PgOL6Gi3-HWuwuHn
 
-# ├── data/
+### Step 2: Annotation Instructions
 
-# │   ├── draft\_transcriptions\_FINAL.csv   # The main file to be annotated
+1. Open the CSV file using Excel or Google Sheets.
+2. Play the corresponding audio file.
+3. Ignore errors in the machine_transcript column.
+4. Write the correct Standard Bengali sentence in the human_correction column.
 
-# │   ├── segmented\_inventory.csv          # Metadata of all audio segments
+Example:
 
-# │   └── audio\_segments/                  # Audio files (Hosted on Drive)
+Audio File | Dialect | Machine Output | Human Correction
+---------- | ------- | -------------- | ----------------
+syl_01.wav | Sylheti | আমি যাইরাম গি | আমি চলে যাচ্ছি
+ctg_05.wav | Chittagonian | ইতারা খাইতে আছে | তারা খাচ্ছে
 
-# ├── notebooks/                           # Code for Mining, Segmentation \& Transcription
+Always normalize into standard Bengali grammar. Do not write dialect spellings unless explicitly instructed.
 
-# ├── experiments/logs/                    # Execution logs
+## Technology Stack
 
-# └── docs/                                # Documentation
+- ASR Model: OpenAI Whisper (Medium / Large-v2)
+- Preprocessing: Silero VAD, FFmpeg
+- Framework: PyTorch, HuggingFace
+- Compute: Kaggle P100 GPU, Colab Pro
 
-# 
+## Author
 
-# 
-
-# \## 🚀 Research Roadmap
-
-# 
-
-# | Phase | Task | Status |
-
-# | :--- | :--- | :--- |
-
-# | \*\*1A\*\* | Problem Definition \& Ambiguity Analysis | ✅ Completed |
-
-# | \*\*1B\*\* | Baseline Testing (Whisper Failure Proof) | ✅ Completed |
-
-# | \*\*1C\*\* | Data Mining \& Segmentation (YouTube) | ✅ Completed |
-
-# | \*\*2A\*\* | Automated Draft Transcription | ✅ Completed |
-
-# | \*\*2B\*\* | \*\*Manual Annotation / Correction\*\* | 🟡 \*\*In Progress\*\* |
-
-# | \*\*3\*\* | Active Learning Loop \& Fine-tuning | ⭕ Upcoming |
-
-# 
-
-# ---
-
-# 
-
-# \## 📝 Guide for Annotators (How to Contribute)
-
-# 
-
-# We use a \*\*Semi-Automated\*\* approach. You do not need to type from scratch.
-
-# 
-
-# \### Step 1: Download Data
-
-# 1\.  \*\*CSV File:\*\* Download `data/draft\_transcriptions\_FINAL.csv` from this repository.
-
-# 2\.  \*\*Audio Files:\*\* Download the audio clips from our Google Drive:
-
-# &nbsp;   \* 🔗 \*\*\[Download Audio Files (Google Drive)](https://drive.google.com/drive/folders/1d6j1felhwS-HHJT4PgOL6Gi3-HWuwuHn)\*\*
-
-# 
-
-# \### Step 2: Start Annotation
-
-# 1\.  Open the CSV file in \*\*Excel\*\* or \*\*Google Sheets\*\*.
-
-# 2\.  Play an audio file (e.g., `Sylheti\_seg001.wav`).
-
-# 3\.  Check the `machine\_transcript` column (It will likely be incorrect/Hindi).
-
-# 4\.  Write the \*\*Standard Bengali (শুদ্ধ বাংলা)\*\* meaning in the `human\_correction` column.
-
-# 
-
-# \### Example:
-
-# | Audio File | Dialect | Machine Output (Wrong) | \*\*Human Correction (Correct)\*\* |
-
-# | :--- | :--- | :--- | :--- |
-
-# | `syl\_01.wav` | Sylheti | আমি যাইরাম গি (Dialect text) | \*\*আমি চলে যাচ্ছি\*\* |
-
-# | `ctg\_05.wav` | Chittagonian | ইতারা খাইতে আছে (Dialect text) | \*\*তারা খাচ্ছে\*\* |
-
-# 
-
-# \*\*Note:\*\* Always normalize to Standard Bengali grammar. Do not write the dialect spelling unless instructed otherwise.
-
-# 
-
-# ---
-
-# 
-
-# \## 🛠️ Technology Stack
-
-# \* \*\*ASR Model:\*\* OpenAI Whisper (Medium/Large-v2)
-
-# \* \*\*Preprocessing:\*\* Silero VAD, FFmpeg
-
-# \* \*\*Environment:\*\* Kaggle P100 GPU / Colab Pro
-
-# \* \*\*Framework:\*\* PyTorch, HuggingFace
-
-# 
-
-# \## 👨‍💻 Author
-
-# \*\*Swagotam Malakar\*\*
-
-# \* Research Domain: NLP \& Speech Processing
-
-# \* GitHub: \[@smalakar-is-here](https://github.com/smalakar-is-here)
-
+Swagotam Malakar  
+Research Domain: NLP and Speech Processing  
+GitHub: https://github.com/smalakar-is-here
